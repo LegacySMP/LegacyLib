@@ -2,7 +2,7 @@ package pro.nocom.legacysmp.legacylib;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin {
+public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
         // ...
