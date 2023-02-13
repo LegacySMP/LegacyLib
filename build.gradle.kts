@@ -18,7 +18,7 @@ dependencies {
 }
 
 bukkit {
-    main = "pro.nocom.legacysmp.legacylib.Main"
+    main = "pro.nocom.legacysmp.legacylib.LegacyLib"
     author = "Allink"
 }
 
