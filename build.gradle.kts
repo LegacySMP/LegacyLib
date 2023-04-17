@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("org.bukkit:asclepius:1.1.7")
+    compileOnly("org.bukkit:asclepius:1.1.8")
 }
 
 java {
