@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "pro.nocom.legacysmp"
-version = "1.0.0"
+version = "1.1.0-SNAPSHOT"
 description = "Library plugin"
 
 repositories {
@@ -26,6 +26,28 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             from(components["java"])
+        }
+    }
+
+    repositories {
+        // ./gradlew --no-daemon publishMavenPublicationToReleasesRepository
+        maven {
+            name = "releases"
+            url = uri("https://maven.allink.esixtwo.one/releases")
+            credentials {
+                username = System.getenv("allinkMavenUser")
+                password = System.getenv("allinkMavenPassword")
+            }
+        }
+
+        // ./gradlew --no-daemon publishMavenPublicationToSnapshotsRepository
+        maven {
+            name = "snapshots"
+            url = uri("https://maven.allink.esixtwo.one/snapshots")
+            credentials {
+                username = System.getenv("allinkMavenUser")
+                password = System.getenv("allinkMavenPassword")
+            }
         }
     }
 }
