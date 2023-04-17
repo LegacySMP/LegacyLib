@@ -17,6 +17,10 @@ dependencies {
     compileOnly("org.bukkit:asclepius:1.1.7")
 }
 
+java {
+    withSourcesJar()
+}
+
 bukkit {
     main = "pro.nocom.legacysmp.legacylib.LegacyLib"
     author = "Allink"
